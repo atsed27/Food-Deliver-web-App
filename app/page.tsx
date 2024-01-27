@@ -1,4 +1,5 @@
 import Best from '@/components/Best';
+import BestDish from '@/components/BestDish';
 import PopularCategories from '@/components/PopularCategories';
 
 export default async function Home() {
@@ -6,6 +7,7 @@ export default async function Home() {
     <main>
       <Best />
       <PopularCategories />
+      <BestDish />
     </main>
   );
 }

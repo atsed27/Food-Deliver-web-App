@@ -1,0 +1,160 @@
+import React from 'react';
+
+function BestDish() {
+  return (
+    <div className="px-3 md:px-10  xl:px-20 mt-10 ">
+      <h5 className="text-red-500 py-4">SPECIAL DISHES</h5>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold">Best Dishes </h1>
+          <h1 className="text-3xl font-bold">From Our Menu</h1>
+        </div>
+        <div className=" hidden sm:flex items-center justify-between">
+          <button className="mr-10">B</button>
+          <button>F</button>
+        </div>
+      </div>
+      <div className="w-full overflow-x-scroll sm:overflow-hidden">
+        <div className="flex sm:grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 w-max sm:w-auto">
+          <div className="flex items-center justify-center w-screen sm:w-auto">
+            <div className=" bg-slate-50 rounded-lg shadow-xl sm:shadow-md  my-4 w-3/4 ">
+              <div className="flex items-center justify-end ">
+                <div className="bg-green-500 px-3 py-2 rounded-tr-lg ">
+                  love
+                </div>
+              </div>
+              <div className="flex items-center justify-center">
+                <img
+                  className="w-1/2 object-contain"
+                  src="/temporary/p4.png"
+                  alt="mainDish"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-between px-3">
+                <h1 className="text-xl font-bold">Doro Wote</h1>
+                <p>Description of Item</p>
+              </div>
+              <div className="flex items-start justify-between px-3">
+                <p className="text-xl font-bold">$ 10.00</p>
+                <div className="flex items-center justify-between">
+                  <button className="mr-4">Icon</button>
+                  <p className="text-sm">4.9</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-screen sm:w-auto">
+            <div className=" bg-slate-50 rounded-lg shadow-xl sm:shadow-md  my-4 w-3/4 ">
+              <div className="flex items-center justify-end ">
+                <div className="bg-green-500 px-3 py-2 rounded-tr-lg ">
+                  love
+                </div>
+              </div>
+              <div className="flex items-center justify-center">
+                <img
+                  className="w-1/2 object-contain"
+                  src="/temporary/p4.png"
+                  alt="mainDish"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-between px-3">
+                <h1 className="text-xl font-bold">Doro Wote</h1>
+                <p>Description of Item</p>
+              </div>
+              <div className="flex items-start justify-between px-3">
+                <p className="text-xl font-bold">$ 10.00</p>
+                <div className="flex items-center justify-between">
+                  <button className="mr-4">Icon</button>
+                  <p className="text-sm">4.9</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-screen sm:w-auto">
+            <div className=" bg-slate-50 rounded-lg shadow-xl sm:shadow-md  my-4 w-3/4 ">
+              <div className="flex items-center justify-end ">
+                <div className="bg-green-500 px-3 py-2 rounded-tr-lg ">
+                  love
+                </div>
+              </div>
+              <div className="flex items-center justify-center">
+                <img
+                  className="w-1/2 object-contain"
+                  src="/temporary/p4.png"
+                  alt="mainDish"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-between px-3">
+                <h1 className="text-xl font-bold">Doro Wote</h1>
+                <p>Description of Item</p>
+              </div>
+              <div className="flex items-start justify-between px-3">
+                <p className="text-xl font-bold">$ 10.00</p>
+                <div className="flex items-center justify-between">
+                  <button className="mr-4">Icon</button>
+                  <p className="text-sm">4.9</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-screen sm:w-auto">
+            <div className=" bg-slate-50 rounded-lg shadow-xl sm:shadow-md  my-4 w-3/4 ">
+              <div className="flex items-center justify-end ">
+                <div className="bg-green-500 px-3 py-2 rounded-tr-lg ">
+                  love
+                </div>
+              </div>
+              <div className="flex items-center justify-center">
+                <img
+                  className="w-1/2 object-contain"
+                  src="/temporary/p4.png"
+                  alt="mainDish"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-between px-3">
+                <h1 className="text-xl font-bold">Doro Wote</h1>
+                <p>Description of Item</p>
+              </div>
+              <div className="flex items-start justify-between px-3">
+                <p className="text-xl font-bold">$ 10.00</p>
+                <div className="flex items-center justify-between">
+                  <button className="mr-4">Icon</button>
+                  <p className="text-sm">4.9</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-screen sm:w-auto">
+            <div className=" bg-slate-50 rounded-lg shadow-xl sm:shadow-md  my-4 w-3/4 ">
+              <div className="flex items-center justify-end ">
+                <div className="bg-green-500 px-3 py-2 rounded-tr-lg ">
+                  love
+                </div>
+              </div>
+              <div className="flex items-center justify-center">
+                <img
+                  className="w-1/2 object-contain"
+                  src="/temporary/p4.png"
+                  alt="mainDish"
+                />
+              </div>
+              <div className="flex flex-col items-start justify-between px-3">
+                <h1 className="text-xl font-bold">Doro Wote</h1>
+                <p>Description of Item</p>
+              </div>
+              <div className="flex items-start justify-between px-3">
+                <p className="text-xl font-bold">$ 10.00</p>
+                <div className="flex items-center justify-between">
+                  <button className="mr-4">Icon</button>
+                  <p className="text-sm">4.9</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default BestDish;

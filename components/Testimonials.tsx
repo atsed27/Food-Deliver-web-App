@@ -2,7 +2,7 @@ import React from 'react';
 
 function Testimonials() {
   return (
-    <div className="   flex flex-col sm:flex-row  px-3 md:px-10  xl:px-20 mt-10  ">
+    <div className=" bg-black/80 text-white py-10  flex flex-col sm:flex-row  px-3 md:px-10  xl:px-20 mt-10  ">
       <div className="flex-1 flex items-center justify-center ">
         <img
           className="w-1/2 xl:w-1/4 object-fill rounded-lg"

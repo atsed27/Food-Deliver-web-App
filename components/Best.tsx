@@ -3,7 +3,7 @@ import React from 'react';
 
 function Best() {
   return (
-    <div className=" px-3 md:px-10 py-7 xl:px-20 flex flex-col sm:flex-row items-center justify-between">
+    <div className=" px-3 md:px-10 pt-7 xl:px-20 flex flex-col sm:flex-row items-center justify-between">
       <div className=" flex-1">
         <div>
           <h2 className="text-3xl font-bold mb-4">

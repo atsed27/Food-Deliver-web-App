@@ -4,21 +4,15 @@ import React from 'react';
 
 function OneProduct() {
   return (
-    <div>
+    <div className="px-3 md:px-0  lg:px-20 ">
       <div className="py-2">
         <Link href={'/'}>back to product</Link>
       </div>
-      <div className="grid gap-4 md:grid-cols-4 md:gap-10">
-        <div className="md:col-span-2">
-          <Image
-            src={'/temporary/p3.png'}
-            alt={'pizza'}
-            width={600}
-            height={600}
-            layout="responsive"
-          />
+      <div className="grid gap-4 md:grid-cols-4 md:gap-2 lg:gap-5 mt-4">
+        <div className="md:col-span-2   w-full md:w-3/4">
+          <img src={'/temporary/p1.png'} alt={'pizza'} />
         </div>
-        <div>
+        <div className="">
           <ul>
             <li>
               <h1 className="text-lg"> Spacial Pizza </h1>
@@ -26,7 +20,11 @@ function OneProduct() {
             <li>Category:Pizza</li>
             <li>Brand:Brand</li>
             <li>5 of 4 reviews</li>
-            <li>Description:Dnie berger ywedal</li>
+            <li>
+              Description:Dnie berger ywedalDnie berger ywedalDnie berger
+              ywedalDnie berger ywedalDnie berger ywedalDnie berger ywedalDnie
+              berger ywedal
+            </li>
           </ul>
         </div>
         <div>
@@ -39,7 +37,9 @@ function OneProduct() {
               <div>status</div>
               <div>{1 > 0 ? 'InStack' : 'Unavailable'}</div>
             </div>
-            <button className="w-full primary-button">Add to cart</button>
+            <button className="w-full bg-green-400 py-1 rounded-md">
+              Add to cart
+            </button>
           </div>
         </div>
       </div>

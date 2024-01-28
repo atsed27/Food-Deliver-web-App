@@ -7,7 +7,7 @@ function Soups() {
         <h1 className="md:text-3xl xl:text-5xl text-2xl font-bold">Soups</h1>
         <div className="overflow-x-scroll sm:overflow-hidden mt-4">
           <div className="flex w-max sm:w-full  sm:flex-col  ">
-            <div className="w-screen sm:w-full justify-between flex-col sm:flex-row flex  sm:border ">
+            <div className="w-screen sm:w-full justify-between flex-col sm:flex-row flex  sm:border sm:mb-4">
               <div className="flex flex-col   sm:flex-row items-center sm:items-start justify-center sm:justify-start w-11/12 h-11/12 sm:w-1/2">
                 <img className="  sm:w-1/3" src="/temporary/p6.png" alt="ap1" />
                 <div className="flex mt-4  flex-col sm:ml-5 sm:mt-5 items-center sm:items-start justify-center sm:flex-row sm:justify-start ">
@@ -27,7 +27,7 @@ function Soups() {
                 </div>
               </div>
             </div>
-            <div className="w-screen sm:w-full justify-between flex-col sm:flex-row flex  sm:border ">
+            <div className="w-screen sm:w-full justify-between flex-col sm:flex-row flex  sm:border sm:mb-4 ">
               <div className="flex flex-col   sm:flex-row items-center sm:items-start justify-center sm:justify-start w-11/12 h-11/12 sm:w-1/2">
                 <img className="  sm:w-1/3" src="/temporary/p2.png" alt="ap1" />
                 <div className="flex mt-4  flex-col sm:ml-5 sm:mt-5 items-center sm:items-start justify-center sm:flex-row sm:justify-start ">

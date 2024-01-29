@@ -1,8 +1,24 @@
-import Image from 'next/image';
+import { productType } from '@/types/Types';
+import axios from 'axios';
 import Link from 'next/link';
 import React from 'react';
 
-function OneProduct() {
+const getData = async (id: string) => {
+  try {
+    const res = await axios.get(`http://localhost:3000/api/product/${id}`);
+    return res.data;
+  } catch (error) {
+    console.log(error);
+    throw new Error('failed');
+  }
+};
+
+type Props = {
+  params: { product: string };
+};
+async function OneProduct({ params }: Props) {
+  console.log(params.product);
+  const singleProduct: productType = await getData(params.product);
   return (
     <div className="px-3 md:px-0  lg:px-20 ">
       <div className="py-2">
@@ -10,12 +26,12 @@ function OneProduct() {
       </div>
       <div className="grid gap-4 md:grid-cols-4 md:gap-2 lg:gap-5 mt-4">
         <div className="md:col-span-2   w-full md:w-3/4">
-          <img src={'/temporary/p1.png'} alt={'pizza'} />
+          {singleProduct.img && <img src={singleProduct.img} alt={'pizza'} />}
         </div>
         <div className="">
           <ul>
             <li>
-              <h1 className="text-lg"> Spacial Pizza </h1>
+              <h1 className="text-lg font-bold"> {singleProduct.title} </h1>
             </li>
             <li>Category:Pizza</li>
             <li>Brand:Brand</li>

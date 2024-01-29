@@ -1,5 +1,6 @@
 import { product } from '@/types/Types';
 import axios from 'axios';
+import Link from 'next/link';
 import React from 'react';
 
 const getData = async () => {
@@ -30,7 +31,8 @@ async function BestDish() {
       <div className="w-full overflow-x-scroll sm:overflow-hidden">
         <div className="flex sm:grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 w-max sm:w-auto">
           {products?.map((item) => (
-            <div
+            <Link
+              href={`/menu/${item.id}`}
               key={item.id}
               className="flex items-center justify-center w-screen sm:w-auto"
             >
@@ -61,7 +63,7 @@ async function BestDish() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { category, product } from '@/types/Types';
+import Link from 'next/link';
 
 const getData = async () => {
   try {
@@ -50,7 +51,7 @@ async function MenuNav() {
             <div className="overflow-x-scroll sm:overflow-hidden mt-4">
               <div className="flex w-max sm:w-full  sm:flex-col  ">
                 {products?.map((product) => (
-                  <div key={product.id}>
+                  <Link href={`/menu/${product.id}`} key={product.id}>
                     {product.catID === item.id && (
                       <div className="w-screen sm:w-full justify-between flex-col sm:flex-row flex  sm:border sm:mb-4 ">
                         <div className="flex flex-col   sm:flex-row items-center sm:items-start justify-center sm:justify-start w-11/12 h-11/12 sm:w-1/2">
@@ -85,7 +86,7 @@ async function MenuNav() {
                         </div>
                       </div>
                     )}
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

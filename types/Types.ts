@@ -15,3 +15,13 @@ export type product = {
   isFeatured: string;
   catID: string;
 }[];
+
+export type productType = {
+  id: string;
+  createdAt: string;
+  title: string;
+  img?: string;
+  price: string;
+  isFeatured: string;
+  catID: string;
+};

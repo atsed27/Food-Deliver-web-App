@@ -27,9 +27,3 @@ model Product {
   category   Category @relation(fields: [catID], references: [id])
   catID    String
 }
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> ui

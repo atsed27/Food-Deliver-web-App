@@ -5,10 +5,7 @@ services:
     environment:
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD: mypassword
-<<<<<<< HEAD
       POSTGRES_DB: foodD
-=======
-      POSTGRES_DB: foodDB
->>>>>>> ui
+
     ports:
       - 5432:5432

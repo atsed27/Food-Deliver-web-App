@@ -1,7 +1,17 @@
+import Best from '@/components/Best';
+import BestDish from '@/components/BestDish';
+import PopularCategories from '@/components/PopularCategories';
+import Testimonials from '@/components/Testimonials';
+import OurService from '../components/OurService';
+
 export default async function Home() {
   return (
     <main>
-      <div className="text-rose-700">Daniel</div>
+      <Best />
+      <PopularCategories />
+      <BestDish />
+      <Testimonials />
+      <OurService/>
     </main>
   );
 }

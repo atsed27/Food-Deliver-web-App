@@ -8,9 +8,6 @@ function Menu() {
   return (
     <div className="px-3 md:px-10  xl:px-20 ">
       <MenuNav />
-      <Appetizers />
-      <Soups />
-      <Pizza />
     </div>
   );
 }

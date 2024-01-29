@@ -12,6 +12,6 @@ export const GET = async () => {
     return new NextResponse(JSON.stringify(categories), { status: 200 });
   } catch (error) {
     console.log(error);
-    NextResponse.json('Server Error', { status: 500 });
+    return new NextResponse(JSON.stringify('server error'), { status: 200 });
   }
 };

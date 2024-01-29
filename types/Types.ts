@@ -5,3 +5,13 @@ export type category = {
   img?: string;
   createdAt: string;
 }[];
+
+export type product = {
+  id: string;
+  createdAt: string;
+  title: string;
+  img?: string;
+  price: string;
+  isFeatured: string;
+  catID: string;
+}[];

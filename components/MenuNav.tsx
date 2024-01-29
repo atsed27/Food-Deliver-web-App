@@ -33,9 +33,12 @@ async function MenuNav() {
           <div className="flex items-center justify-between">
             {category.map((item) => (
               <div key={item.id} className="mr-3 bg-orange-300 rounded-full">
-                <h3 className=" px-4 text-lg py-[2px] font-bold ">
+                <Link
+                  href={`/menu/#${item.title}`}
+                  className=" px-4 text-lg py-[2px] font-bold "
+                >
                   {item.title}
-                </h3>
+                </Link>
               </div>
             ))}
           </div>
@@ -43,7 +46,7 @@ async function MenuNav() {
       </div>
 
       {category?.map((item) => (
-        <div key={item.id} className="mt-4">
+        <div id={`${item.title}`} key={item.id} className="mt-4">
           <div>
             <h1 className="md:text-3xl xl:text-5xl text-2xl font-bold">
               {item.title}

@@ -15,7 +15,10 @@ function NavBar() {
           <span className="bg-green-500 text-white px-2 rounded-md ">D</span>
           oro
         </div>
-        <div onClick={() => setInOut(!InOut)} className="flex sm:hidden">
+        <div
+          onClick={() => setInOut(!InOut)}
+          className="flex hover:cursor-pointer sm:hidden"
+        >
           <Image src="/Icon/menu.svg" width={30} height={30} alt="menu" />
         </div>
         <div className="hidden sm:flex items-center justify-center">
@@ -55,6 +58,7 @@ function NavBar() {
       </div>
       {/**Mobile nav bar */}
       <div
+        onClick={() => setInOut(!InOut)}
         className={
           InOut
             ? 'top-0 left-0 h-screen bg-black/70 w-full fixed md:hidden'
@@ -97,9 +101,9 @@ function NavBar() {
               </div>
             </div>
             <div className="rounded-full  ">
-              <h1 onClick={() => setInOut(!InOut)} className="text-2xl">
+              <button onClick={() => setInOut(!InOut)} className="text-2xl">
                 X
-              </h1>
+              </button>
             </div>
           </div>
           <div className=" p-10  flex flex-col items-baseline  justify-end">

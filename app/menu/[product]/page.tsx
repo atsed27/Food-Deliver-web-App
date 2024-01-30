@@ -1,3 +1,4 @@
+import AddToCart from '@/components/AddToCart';
 import { productType } from '@/types/Types';
 import axios from 'axios';
 import Link from 'next/link';
@@ -19,6 +20,7 @@ type Props = {
 async function OneProduct({ params }: Props) {
   console.log(params.product);
   const singleProduct: productType = await getData(params.product);
+
   return (
     <div className="px-3 md:px-0  lg:px-20 ">
       <div className="py-2">
@@ -53,9 +55,7 @@ async function OneProduct({ params }: Props) {
               <div>status</div>
               <div>{1 > 0 ? 'InStack' : 'Unavailable'}</div>
             </div>
-            <button className="w-full bg-green-400 py-1 rounded-md">
-              Add to cart
-            </button>
+            <AddToCart />
           </div>
         </div>
       </div>

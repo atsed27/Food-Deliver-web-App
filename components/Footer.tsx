@@ -3,7 +3,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="flex flex-col  items-center justify-center bg-primary mt-10 md:mt-20  mx-3 md:mx-10 pt-7 xl:px-20 ">
+    <footer className="flex  flex-col  items-center justify-center bg-primary mt-10 md:mt-20  mx-3 md:mx-10 pt-7 xl:px-20 ">
       <div className="w-full flex items-center justify-center ">
         <div className="grid sm:grid-cols-2  gap-4 mx-3 my-2  md:grid-cols-4">
           <div className="flex items-center flex-col">
@@ -70,7 +70,7 @@ function Footer() {
       </div>
       <div className="my-4 flex flex-col sm:flex-row items-center ">
         <div className="mr-5">Social media </div>
-        <h2 className="text-lg">Copyright @ 2023 melhk | All right reserved</h2>
+        <h2 className="text-lg">Copyright @ 2023 Dani | All right reserved</h2>
       </div>
     </footer>
   );

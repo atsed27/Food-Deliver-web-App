@@ -3,21 +3,22 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center bg-primary mt-10 md:mt-20  px-3 md:px-10 pt-7 xl:px-20 ">
-      <div className="w-full ">
-        <div className="grid grid-cols-2 gap-4 mx-3 my-2 jioFooter md:grid-cols-4">
-          <div className="">
+    <footer className="flex flex-col  items-center justify-center bg-primary mt-10 md:mt-20  mx-3 md:mx-10 pt-7 xl:px-20 ">
+      <div className="w-full flex items-center justify-center ">
+        <div className="grid sm:grid-cols-2  gap-4 mx-3 my-2  md:grid-cols-4">
+          <div className="flex items-center flex-col">
             <h2 className="mb-4 text-xl font-bold md:text-2xl">
               <span className="bg-green-500 text-white px-2 rounded-md ">
                 D
               </span>
               oro
             </h2>
-            <p className="">
-              Lorem ipsum dolor sit amet,consectetur adipiscing elit.
+            <p className="text-center">
+              Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet,consectetur adipiscing elit.
             </p>
           </div>
-          <div className="">
+          <div className="flex items-center flex-col ">
             <h2 className="mb-4 text-xl font-bold ">Useful links</h2>
             <div className="">
               <Link href={'/'}>
@@ -34,7 +35,7 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div>
+          <div className="flex items-center flex-col">
             <h2 className="mb-4 text-xl font-bold">Main Menu</h2>
             <div className="">
               <Link href={'/'}>
@@ -51,7 +52,7 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div>
+          <div className="flex items-center flex-col">
             <h2 className="mb-4 text-xl font-bold">Contact Us</h2>
             <div className="">
               <Link href={'/'}>

@@ -6,3 +6,8 @@ html {
   scroll-behavior: smooth;
   font-family: 'Raleway', sans-serif;
 }
+.jio {
+  @media only screen and (max-width: 360px) {
+    display: none;
+  }
+}

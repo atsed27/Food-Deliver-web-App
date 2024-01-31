@@ -50,27 +50,96 @@ function Cart() {
                   <button>x</button>
                 </td>
               </tr>
+            </tbody>{' '}
+            <tbody>
+              <tr className="border-b ">
+                <td className="py-10  ">
+                  <Link
+                    className="flex sm:flex-row flex-col items-center"
+                    href="/"
+                  >
+                    <Image
+                      src={'/temporary/p2.png'}
+                      alt={'no'}
+                      width={100}
+                      height={100}
+                    />
+                    <h2>Burger</h2>
+                  </Link>
+                </td>
+                <td className="p-5 text-center ">hfkjrfnekr kfeirfhk ifier</td>
+                <td className="p-5 text-right">
+                  <div className="flex items-center justify-center flex-col sm:flex-row">
+                    <span className="bg-black/70 px-4 text-lg font-bold rounded-md">
+                      +
+                    </span>
+                    <span className="mx-2">1</span>
+                    <span className="bg-gray-200 px-4 text-lg font-bold rounded-md">
+                      -
+                    </span>
+                  </div>
+                </td>
+                <td className="p-5 text-right">$30</td>
+                <td className="p-5 text-center">
+                  <button>x</button>
+                </td>
+              </tr>
+            </tbody>{' '}
+            <tbody>
+              <tr className="border-b ">
+                <td className="py-10  ">
+                  <Link
+                    className="flex sm:flex-row flex-col items-center"
+                    href="/"
+                  >
+                    <Image
+                      src={'/temporary/p2.png'}
+                      alt={'no'}
+                      width={100}
+                      height={100}
+                    />
+                    <h2>Burger</h2>
+                  </Link>
+                </td>
+                <td className="p-5 text-center ">hfkjrfnekr kfeirfhk ifier</td>
+                <td className="p-5 text-right">
+                  <div className="flex items-center justify-center flex-col sm:flex-row">
+                    <span className="bg-black/70 px-4 text-lg font-bold rounded-md">
+                      +
+                    </span>
+                    <span className="mx-2">1</span>
+                    <span className="bg-gray-200 px-4 text-lg font-bold rounded-md">
+                      -
+                    </span>
+                  </div>
+                </td>
+                <td className="p-5 text-right">$30</td>
+                <td className="p-5 text-center">
+                  <button>x</button>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <div className="mt-8 md:mt-14 flex items-center md:justify-end overflow-auto">
-          <div className="flex items-center justify-between border rounded px-3 py-2 mr-4 ">
+        <div className="mt-8 md:mt-14 flex flex-wrap items-center md:justify-end ">
+          <div className="flex items-center justify-between border rounded px-3 py-2 m-4 ">
             <h3 className="text-lg mr-4">Discount</h3>
             <h3 className="text-lg font-bold">$0.00</h3>
           </div>
-          <div className="flex items-center justify-between border rounded px-3 py-2 mr-4 ">
+          <div className="flex items-center justify-between border rounded px-3 py-2 m-4 ">
             <h3 className="text-lg mr-4">Delivery</h3>
             <h3 className="text-lg font-bold">$0.00</h3>
           </div>
-          <div className="flex items-center justify-between border rounded px-3 py-2 mr-4 ">
+          <div className="flex items-center justify-between border rounded px-3 py-2 m-4 ">
             <h3 className="text-lg mr-4">SubTotal</h3>
             <h3 className="text-lg font-bold">$150.00</h3>
           </div>
-          <div className="flex items-center justify-between border rounded px-3 py-2 mr-4 ">
+          <div className="flex items-center justify-between border rounded px-3 py-2 m-4 bg-slate-400 ">
             <h3 className="text-lg mr-4">Total</h3>
             <h3 className="text-lg font-bold">$120.00</h3>
           </div>
         </div>
+        <hr />
         <div className="mt-4">
           <p className="text-xl font-medium">
             If you have promotion cart ,pleas enter here:

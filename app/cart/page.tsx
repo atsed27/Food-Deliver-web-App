@@ -1,8 +1,33 @@
+'use client';
+
+import { cartStore } from '@/utils/store';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function Cart() {
+  const { products, addToCart, removeFromCart, totalItems, totalPrice } =
+    cartStore();
+  console.log(products);
+  useEffect(() => {
+    cartStore.persist.rehydrate();
+  }, []);
+
+  if (products.length === 0) {
+    return (
+      <div className="px-3 md:px-10 xl:px-60 mt-10 h-screen">
+        No Cart Here <Link href={'/menu'}>Menu</Link>{' '}
+      </div>
+    );
+  }
+
+  const handleClick = () => {
+    console.log('wta');
+    products.map((item) => {
+      removeFromCart(item);
+    });
+  };
+
   return (
     <div className="px-3 md:px-10 xl:px-60 mt-10 md:mb-40 lg:mb-52">
       <div>
@@ -17,108 +42,46 @@ function Cart() {
                 <th className="p-5 ">Action</th>
               </tr>
             </thead>
-            <tbody>
-              <tr className="border-b ">
-                <td className="py-10  ">
-                  <Link
-                    className="flex sm:flex-row flex-col items-center"
-                    href="/"
-                  >
-                    <Image
-                      src={'/temporary/p2.png'}
-                      alt={'no'}
-                      width={100}
-                      height={100}
-                    />
-                    <h2>Burger</h2>
-                  </Link>
-                </td>
-                <td className="p-5 text-center ">hfkjrfnekr kfeirfhk ifier</td>
-                <td className="p-5 text-right">
-                  <div className="flex items-center justify-center flex-col sm:flex-row">
-                    <span className="bg-black/70 px-4 text-lg font-bold rounded-md">
-                      +
-                    </span>
-                    <span className="mx-2">1</span>
-                    <span className="bg-gray-200 px-4 text-lg font-bold rounded-md">
-                      -
-                    </span>
-                  </div>
-                </td>
-                <td className="p-5 text-right">$30</td>
-                <td className="p-5 text-center">
-                  <button>x</button>
-                </td>
-              </tr>
-            </tbody>{' '}
-            <tbody>
-              <tr className="border-b ">
-                <td className="py-10  ">
-                  <Link
-                    className="flex sm:flex-row flex-col items-center"
-                    href="/"
-                  >
-                    <Image
-                      src={'/temporary/p2.png'}
-                      alt={'no'}
-                      width={100}
-                      height={100}
-                    />
-                    <h2>Burger</h2>
-                  </Link>
-                </td>
-                <td className="p-5 text-center ">hfkjrfnekr kfeirfhk ifier</td>
-                <td className="p-5 text-right">
-                  <div className="flex items-center justify-center flex-col sm:flex-row">
-                    <span className="bg-black/70 px-4 text-lg font-bold rounded-md">
-                      +
-                    </span>
-                    <span className="mx-2">1</span>
-                    <span className="bg-gray-200 px-4 text-lg font-bold rounded-md">
-                      -
-                    </span>
-                  </div>
-                </td>
-                <td className="p-5 text-right">$30</td>
-                <td className="p-5 text-center">
-                  <button>x</button>
-                </td>
-              </tr>
-            </tbody>{' '}
-            <tbody>
-              <tr className="border-b ">
-                <td className="py-10  ">
-                  <Link
-                    className="flex sm:flex-row flex-col items-center"
-                    href="/"
-                  >
-                    <Image
-                      src={'/temporary/p2.png'}
-                      alt={'no'}
-                      width={100}
-                      height={100}
-                    />
-                    <h2>Burger</h2>
-                  </Link>
-                </td>
-                <td className="p-5 text-center ">hfkjrfnekr kfeirfhk ifier</td>
-                <td className="p-5 text-right">
-                  <div className="flex items-center justify-center flex-col sm:flex-row">
-                    <span className="bg-black/70 px-4 text-lg font-bold rounded-md">
-                      +
-                    </span>
-                    <span className="mx-2">1</span>
-                    <span className="bg-gray-200 px-4 text-lg font-bold rounded-md">
-                      -
-                    </span>
-                  </div>
-                </td>
-                <td className="p-5 text-right">$30</td>
-                <td className="p-5 text-center">
-                  <button>x</button>
-                </td>
-              </tr>
-            </tbody>
+            {products.map((item) => (
+              <tbody key={item.id}>
+                <tr className="border-b ">
+                  <td className="py-10  ">
+                    <Link
+                      className="flex sm:flex-row flex-col items-center"
+                      href="/"
+                    >
+                      {item.img && (
+                        <Image
+                          src={item.img}
+                          alt={'no'}
+                          width={100}
+                          height={100}
+                        />
+                      )}
+                      <h2> {item.title} </h2>
+                    </Link>
+                  </td>
+                  <td className="p-5 text-center ">
+                    hfkjrfnekr kfeirfhk ifier
+                  </td>
+                  <td className="p-5 text-right">
+                    <div className="flex items-center justify-center flex-col sm:flex-row">
+                      <span className="bg-black/70 px-4 text-lg font-bold rounded-md">
+                        +
+                      </span>
+                      <span className="mx-2"> {item.quantity} </span>
+                      <span className="bg-gray-200 px-4 text-lg font-bold rounded-md">
+                        -
+                      </span>
+                    </div>
+                  </td>
+                  <td className="p-5 text-right">$ {item.price}</td>
+                  <td className="p-5 text-center">
+                    <button onClick={handleClick}>x</button>
+                  </td>
+                </tr>
+              </tbody>
+            ))}
           </table>
         </div>
         <div className="mt-8 md:mt-14 flex flex-wrap items-center md:justify-end ">
@@ -132,11 +95,11 @@ function Cart() {
           </div>
           <div className="flex items-center justify-between border rounded px-3 py-2 m-4 ">
             <h3 className="text-lg mr-4">SubTotal</h3>
-            <h3 className="text-lg font-bold">$150.00</h3>
+            <h3 className="text-lg font-bold">$ {totalPrice} </h3>
           </div>
           <div className="flex items-center justify-between border rounded px-3 py-2 m-4 bg-slate-400 ">
             <h3 className="text-lg mr-4">Total</h3>
-            <h3 className="text-lg font-bold">$120.00</h3>
+            <h3 className="text-lg font-bold">$ {totalPrice}</h3>
           </div>
         </div>
         <hr />

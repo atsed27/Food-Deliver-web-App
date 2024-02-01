@@ -21,7 +21,7 @@ export type productType = {
   createdAt: string;
   title: string;
   img?: string;
-  price: string;
+  price: number;
   isFeatured: string;
   catID: string;
 };

@@ -55,7 +55,7 @@ async function OneProduct({ params }: Props) {
               <div>status</div>
               <div>{1 > 0 ? 'InStack' : 'Unavailable'}</div>
             </div>
-            <AddToCart />
+            <AddToCart product={singleProduct} />
           </div>
         </div>
       </div>

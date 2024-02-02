@@ -16,23 +16,27 @@ export const cartStore = create(
       totalPrice: InitialState.totalPrice,
 
       addToCart(item) {
-        const products = get().products;
-        const productInState = products.find(
-          (product) => product.id === item.id
-        );
-
-        if (productInState) {
-          const updatedProducts = products.map((product) =>
-            product.id === productInState.id
-              ? {
-                  ...item,
-                  quantity: item.quantity + product.quantity,
-                  price: item.price + product.price,
-                }
-              : item
-          );
+        let x = 0;
+        console.log(item);
+        const getProducts = get().products;
+        console.log(getProducts);
+        const findProduct = getProducts.find((each) => each.id === item.id);
+        console.log(findProduct);
+        if (findProduct) {
+          console.log('ale');
           set((state) => ({
-            products: updatedProducts,
+            products: state.products.map((product) =>
+              product.id === findProduct.id
+                ? {
+                    ...item,
+                    id: item.id,
+                    title: item.title,
+                    img: item.img,
+                    quantity: product.quantity + item.quantity,
+                    price: item.price + product.price,
+                  }
+                : item
+            ),
             totalItems: state.totalItems + item.quantity,
             totalPrice: state.totalPrice + item.price,
           }));

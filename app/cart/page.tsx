@@ -8,7 +8,7 @@ import React, { useEffect } from 'react';
 function Cart() {
   const { products, addToCart, removeFromCart, totalItems, totalPrice } =
     cartStore();
-  console.log(products);
+  console.log(products, totalItems, totalPrice);
   useEffect(() => {
     cartStore.persist.rehydrate();
   }, []);
@@ -20,13 +20,6 @@ function Cart() {
       </div>
     );
   }
-
-  const handleClick = () => {
-    console.log('wta');
-    products.map((item) => {
-      removeFromCart(item);
-    });
-  };
 
   return (
     <div className="px-3 md:px-10 xl:px-60 mt-10 md:mb-40 lg:mb-52">
@@ -77,7 +70,7 @@ function Cart() {
                   </td>
                   <td className="p-5 text-right">$ {item.price}</td>
                   <td className="p-5 text-center">
-                    <button onClick={handleClick}>x</button>
+                    <button onClick={() => removeFromCart(item)}>x</button>
                   </td>
                 </tr>
               </tbody>

@@ -10,7 +10,6 @@ function AddToCart({ product }: { product: productType }) {
   const [total, setTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const router = useRouter();
-  console.log(product);
   useEffect(() => {
     cartStore.persist.rehydrate();
   }, []);
@@ -18,7 +17,6 @@ function AddToCart({ product }: { product: productType }) {
     setTotal(quantity * product.price);
   }, []);
   const AddToCart = () => {
-    console.log('hy');
     addToCart({
       id: product.id,
       title: product.title,
@@ -26,7 +24,7 @@ function AddToCart({ product }: { product: productType }) {
       price: total,
       quantity: quantity,
     });
-    router.push('/cart');
+    // router.push('/cart');
   };
   return (
     <div>

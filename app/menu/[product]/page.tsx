@@ -22,7 +22,7 @@ async function OneProduct({ params }: Props) {
   const singleProduct: productType = await getData(params.product);
 
   return (
-    <div className="px-3 md:px-0 mb-20 md:mb-72 lg:px-20 ">
+    <div className="px-3 md:px-0 mb-20 md:h-screen lg:px-20 ">
       <div className="py-2">
         <Link href={'/'}>back to product</Link>
       </div>
